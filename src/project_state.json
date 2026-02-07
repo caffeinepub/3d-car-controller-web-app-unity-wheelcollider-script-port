@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Unity (3D) car controller app using WheelColliders, supporting acceleration, steering, braking, wheel mesh syncing, and basic drag handling.",
+  "architectural_notes": [
+    "Use Unity WheelCollider-based vehicle physics with Rigidbody centerOfMass adjustment and wheel mesh sync via WheelCollider.GetWorldPose.",
+    "Handle input in Update() and apply physics in FixedUpdate()."
+  ],
+  "known_issues": [
+    "Deployment/build process encountered a technical snafu; user requested a rebuild/retry."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-playable-3d-car-controller-experience-in-the-browser-that-mirrors-the-provided-unity-carcontroller-behavior-rear-wheel-acceleration-front-wheel-steering-braking-with-space-wheel-mesh-sync-and-basic-drag-friction-handling",
+      "title": "Create a playable 3D car controller experience in the browser that mirrors the provided Unity CarController behavior: rear-wheel acceleration, front-wheel steering, braking with Space, wheel mesh sync, and basic drag/friction handling.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-tunable-car-settings-panel-matching-the-unity-script-s-exposed-parameters-motorpower-brakepower-maxsteerangle-dragonground-and-allow-live-adjustment-while-driving",
+      "title": "Implement a tunable car settings panel matching the Unity script’s exposed parameters (motorPower, brakePower, maxSteerAngle, dragOnGround) and allow live adjustment while driving.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-in-app-control-help-overlay-that-documents-the-controls-and-the-relationship-to-the-unity-inputs-horizontal-vertical-space-brake",
+      "title": "Add an in-app control/help overlay that documents the controls and the relationship to the Unity inputs (Horizontal/Vertical + Space brake).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-persist-the-user-s-latest-car-settings-motorpower-brakepower-maxsteerangle-dragonground-so-returning-users-see-their-last-used-values",
+      "title": "Persist the user’s latest car settings (motorPower, brakePower, maxSteerAngle, dragOnGround) so returning users see their last-used values.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-define-and-apply-a-coherent-distinctive-visual-theme-for-the-app-ui-typography-spacing-surfaces-and-scene-presentation-lighting-background-suitable-for-a-minimalist-driving-demo-do-not-use-a-blue-purple-palette",
+      "title": "Define and apply a coherent, distinctive visual theme for the app UI (typography, spacing, surfaces) and scene presentation (lighting/background) suitable for a minimalist driving demo; do not use a blue-purple palette.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-visual-assets-for-the-app-logo-and-a-subtle-scene-backdrop-texture-and-render-them-from-the-frontend-as-static-assets",
+      "title": "Add generated static visual assets for the app (logo and a subtle scene backdrop texture) and render them from the frontend as static assets.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-re-run-the-full-build-and-deployment-process-for-the-existing-unity-style-3d-car-controller-app-and-ensure-the-deployment-completes-successfully-without-errors",
+      "title": "Re-run the full build and deployment process for the existing Unity-style 3D car controller app and ensure the deployment completes successfully without errors.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-if-the-build-deployment-fails-again-identify-and-fix-the-underlying-build-or-deployment-configuration-issue-so-subsequent-builds-and-deployments-succeed-reliably",
+      "title": "If the build/deployment fails again, identify and fix the underlying build or deployment configuration issue so subsequent builds and deployments succeed reliably.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build a Unity car controller app using WheelColliders (rear-wheel motor torque, front-wheel steering, braking on Space, wheel mesh sync, and Rigidbody drag).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "3d",
+  "projectName": "3D Car Controller Web App (Unity WheelCollider script port)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

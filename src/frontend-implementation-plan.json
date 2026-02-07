@@ -1,0 +1,58 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Restore successful build/deploy for the Unity-style 3D car controller app (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "summary": "Fix frontend compile/runtime blockers so a clean build succeeds and the deployed app renders without a blank screen.",
+      "acceptanceCriteria": [
+        "A clean build completes successfully (no compile/type errors).",
+        "Deployment completes successfully (no deployment errors).",
+        "The deployed app loads in the browser without a blank screen or runtime crash."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Fix broken imports so the app compiles and starts reliably (e.g., correct the global CSS import to match the existing file location, and ensure App import resolves)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the missing React App entry component expected by frontend/src/main.tsx. Keep it minimal and stable (layout shell + mount point for the existing 3D car controller experience) to prevent runtime crashes/blank screen."
+        },
+        {
+          "path": "frontend/src/config.ts",
+          "operation": "create",
+          "description": "Implement the missing config loader used by the auth hook so the build no longer fails due to unresolved imports. Use the core-infrastructure component’s configuration expectations for backend connection settings; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Resolve recurring frontend build/deploy configuration issues so builds/deployments succeed reliably without adding user-facing features.",
+      "acceptanceCriteria": [
+        "A previously failing build/deployment scenario is resolved and can be repeated successfully at least twice in a row.",
+        "No new user-facing features are added as part of the fix; changes are limited to what is necessary to restore build/deployment success."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useInternetIdentity.ts",
+          "operation": "modify",
+          "description": "Remove/replace Node-specific environment access that can break Vite builds/runtime (e.g., avoid relying on process.env in the browser). Prefer a safe browser-compatible env/config source and fall back gracefully when unset to prevent runtime crashes."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Verify the HTML entry is compatible with the bundler output and deployment base path assumptions (script module entry remains correct) and adjust only if required to eliminate deployment-time blank screen issues."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add lightweight error containment (e.g., a React error boundary or guarded rendering) around the app’s initial render path to prevent a single initialization failure from causing a blank screen, without introducing new user-facing features."
+        }
+      ]
+    }
+  ]
+}

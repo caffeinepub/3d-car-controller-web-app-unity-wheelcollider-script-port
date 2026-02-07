@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Minimal Motoko actor with no methods defined.",
+  "feature_evidence.json": "Feature evidence metadata listing features, related files, components, tests, and confidence.",
+  "frontend-file-summaries.txt": "Prewritten summaries of various frontend source files and their purposes.",
+  "frontend/index.css": "Tailwind-based global styling defining OKLCH color variables and light/dark theme rules.",
+  "frontend/index.html": "Base HTML entry point that loads the React app via main.tsx.",
+  "frontend/src/App.tsx": "Main React component managing car settings, UI overlays, and rendering the 3D scene with physics.",
+  "frontend/src/components/CarScene.tsx": "Renders the 3D environment including lighting, ground, and a physics-driven car with wheel colliders.",
+  "frontend/src/components/Footer.tsx": "Simple footer displaying attribution and a link to caffeine.ai.",
+  "frontend/src/components/Header.tsx": "Header with app title, logo, and buttons for toggling help and settings.",
+  "frontend/src/components/HelpOverlay.tsx": "Modal overlay describing keyboard controls and Unity input equivalents.",
+  "frontend/src/components/Loader.tsx": "Centered spinner shown while the 3D scene loads.",
+  "frontend/src/components/SettingsPanel.tsx": "Config panel providing sliders to adjust car physics values and persist changes.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages an authenticated or anonymous backend actor using React Query.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and provider for Internet Identity authentication, handling identity loading, login, logout, and tracking login status.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder module exporting nothing and indicating no backend queries are used.",
+  "frontend/src/index.css": "Defines Tailwind layers, theme CSS variables, dark mode variants, and custom slider thumb styles.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and the Internet Identity provider.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, radius, animations, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project metadata describing a Unity-style 3D car controller app, its features, issues, and build state."
+}

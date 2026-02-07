@@ -1,0 +1,12 @@
+{
+  "frontend/src/config.ts": "Configuration loader that fetches backend canister settings from env.json with fallback defaults for development environments.",
+  "frontend/src/App.tsx": "Main application component managing car settings state, persistence, and rendering the 3D canvas with physics, settings panel, and help overlay.",
+  "frontend/src/components/Header.tsx": "Application header displaying logo, title, and action buttons for help and settings panels.",
+  "frontend/src/components/Footer.tsx": "Footer component with copyright notice and caffeine.ai attribution link.",
+  "frontend/src/components/CarScene.tsx": "3D scene component containing the car physics simulation with Unity WheelCollider-style behavior, using properly structured React hooks at the top level for all four wheels with correct TypeScript tuple typing for physics forces, ground plane, and lighting setup.",
+  "frontend/src/components/SettingsPanel.tsx": "Overlay panel with sliders for adjusting car physics parameters (motor power, brake power, steering angle, drag) in real-time.",
+  "frontend/src/components/HelpOverlay.tsx": "Modal overlay displaying keyboard controls and their Unity input equivalents for the car controller.",
+  "frontend/src/components/Loader.tsx": "Loading indicator displayed while the 3D scene initializes.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks (currently empty as no backend queries are needed).",
+  "frontend/src/index.css": "Global styles with OKLCH color system for light/dark modes and custom slider styling for the settings panel."
+}

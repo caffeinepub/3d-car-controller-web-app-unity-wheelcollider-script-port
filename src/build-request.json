@@ -1,0 +1,58 @@
+{
+  "kind": "build_request",
+  "title": "Retry full build and deployment for the Unity-style 3D car controller app",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "text": "Re-run the full build and deployment process for the existing Unity-style 3D car controller app and ensure the deployment completes successfully without errors.",
+      "target": "unknown",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Build the app again"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A clean build completes successfully (no compile/type errors).",
+        "Deployment completes successfully (no deployment errors).",
+        "The deployed app loads in the browser without a blank screen or runtime crash."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "If the build/deployment fails again, identify and fix the underlying build or deployment configuration issue so subsequent builds and deployments succeed reliably.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2",
+          "msg-4"
+        ],
+        "quotes": [
+          "🙏 Oops, hit technical snafu",
+          "Build the app again"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A previously failing build/deployment scenario is resolved and can be repeated successfully at least twice in a row.",
+        "No new user-facing features are added as part of the fix; changes are limited to what is necessary to restore build/deployment success."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for any user-facing text.",
+    "Respect the existing single-actor Motoko backend architecture (do not introduce additional backend services).",
+    "Do not edit files in the frontend immutable paths listed in SYSTEM_CONTEXT."
+  ],
+  "nonGoals": [
+    "Adding new gameplay features beyond the already-described 3D car controller experience.",
+    "Changing the app’s visual theme or UI behavior unless required to fix a build/runtime error.",
+    "Introducing third-party services or external databases."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
